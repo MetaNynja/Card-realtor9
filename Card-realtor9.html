@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add the viewport meta tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    
+    <style>
+        /* Styling for the widget */
+        .realtor-widget {
+            max-width: 100%; /* Set a max-width to prevent overflow */
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+            border: 3px solid #bcaf8a;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 5px #aaa;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .realtor-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto 10px;
+            margin-top: 20px;
+        }
+        .realtor-name {
+		font-family: Arial, sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .realtor-position {
+		font-family: Arial, sans-serif;
+            font-size: 20px;
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+        .realtor-description {
+		font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .social-icons {
+            margin-top: 40px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-icons i {
+            font-size: 24px;
+            color: #0077B5;
+            margin-bottom: 20px;
+        }
+
+        /* Custom styling for the gold icon */
+        .custom-gold-icon {
+            color: #bcaf8a;
+        }
+
+        /* Styling for the "Designed by Justin Martin" text */
+        .designed-by {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            background-color: transparent;
+            padding: 5px 10px;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("message", function (e) {
+            if (e.data === "resize") {
+                var body = document.body,
+                    html = document.documentElement,
+                    height = Math max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+                parent.postMessage(height, "*");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="realtor-widget">
+        <img class="realtor-picture" src="https://i2.moxi.onl/img-pr/a/2e55f682-e98e-4c32-aaee-3e658f2ab8c2/0_2_full.jpg" alt="Realtor's Picture">
+        <div class="realtor-name">Tammy Teeuwen</div>
+        <div class="realtor-position">Co-Owner | Broker of Record</div>
+        <div class="realtor-description">
+            <strong><span class="custom-gold-icon">&#9432</span></strong> &nbsp; A Broker of Record is a licensed real estate professional who has the authority and responsibility to oversee a real estate brokerage firm. This role includes ensuring compliance with regulations, managing transactions, and providing guidance to agents.
+        </div>
+        <div class="social-icons">
+            <a href="tel:+15193652615"><i class="fas fa-phone"></i></a>
+            <a href="https://www.linkedin.com/in/tammy-teeuwen-79b187281" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/tteeuwencentury21maplecityrealty/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/tammyteeuwen_century21?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="designed-by">Designed by Justin Martin</div>
+    </div>
+</body>
+</html>
